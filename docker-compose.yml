@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # Desktop Browser Web Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    container_name: desktop-browser
+    
+    ports:
+      - "${PORT:-3000}:3000"
+    
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - PORT=3000
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - RATE_LIMIT_MAX_REQUESTS=${RATE_LIMIT_MAX_REQUESTS:-100}
+      - RATE_LIMIT_WINDOW_MS=${RATE_LIMIT_WINDOW_MS:-900000}
+    
+    restart: unless-stopped
+    
+    networks:
+      - desktop-browser-network
+    
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/api/health', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    
+    # Resource limits (optional)
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    
+    # Volume mounts (for development)
+    volumes:
+      - ./public:/app/public:ro
+      - ./server.js:/app/server.js:ro
+
+networks:
+  desktop-browser-network:
+    driver: bridge
+
+# Usage:
+# Production: docker-compose up -d
+# Development: docker-compose up
+# View logs: docker-compose logs -f
+# Stop: docker-compose down
