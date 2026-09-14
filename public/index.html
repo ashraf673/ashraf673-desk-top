@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Browser - Force Desktop Mode</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234A90E2' width='100' height='100' rx='20'/><circle cx='50' cy='40' r='15' fill='white'/><path d='M 30 70 Q 50 60 70 70' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                </svg>
+                <span>Desktop Browser</span>
+            </div>
+            <div class="tagline">Force Desktop Mode on Mobile</div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search Section -->
+            <section id="searchSection" class="search-section active">
+                <div class="search-container">
+                    <div class="search-box">
+                        <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Enter URL or search term"
+                            autocomplete="off"
+                        >
+                        <button id="clearBtn" class="clear-btn" style="display: none;">
+                            <svg viewBox="0 0 24 24" width="18" height="18">
+                                <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button id="goBtn" class="go-btn">
+                        <svg viewBox="0 0 24 24" width="18" height="18">
+                            <path fill="currentColor" d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 C22.9702544,11.6889879 22.9702544,11.6889879 22.9702544,11.5318905 L4.13399899,1.16770506 C3.34915502,0.9106077 2.40734225,1.01671571 1.77946707,1.4880078 C0.994623095,2.11268023 0.837654326,3.20028872 1.15159189,3.98584127 L3.03521743,10.4268342 C3.03521743,10.5839316 3.34915502,10.7410291 3.50612381,10.7410291 L16.6915026,11.5264635 C16.6915026,11.5264635 17.1624089,11.5264635 17.1624089,11.0551714 L17.1624089,12.0131119 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z"/>
+                        </svg>
+                        Go
+                    </button>
+                </div>
+
+                <div class="examples">
+                    <div class="examples-title">Examples:</div>
+                    <div class="examples-list">
+                        <div class="example-item">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path fill="currentColor" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+                            </svg>
+                            <span>amazon.com</span>
+                        </div>
+                        <div class="example-item">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path fill="currentColor" d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21h-4v-1h4v1zm4-4H7V4h8v14z"/>
+                            </svg>
+                            <span>weather today</span>
+                        </div>
+                        <div class="example-item">
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                            </svg>
+                            <span>https://example.com</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Browser Section -->
+            <section id="browserSection" class="browser-section" style="display: none;">
+                <!-- Browser Toolbar -->
+                <div class="browser-toolbar">
+                    <div class="nav-buttons">
+                        <button id="backBtn" class="nav-btn" title="Back">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                            </svg>
+                        </button>
+                        <button id="forwardBtn" class="nav-btn" title="Forward">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </button>
+                        <button id="reloadBtn" class="nav-btn" title="Reload">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+                            </svg>
+                        </button>
+                        <button id="stopBtn" class="nav-btn" title="Stop" style="display: none;">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M6 4h12v12H6z"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="url-bar-container">
+                        <svg class="url-icon" viewBox="0 0 24 24" width="18" height="18">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="urlBar" 
+                            class="url-bar"
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="homeBtn" class="action-btn" title="Home">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                            </svg>
+                        </button>
+                        <button id="shareBtn" class="action-btn" title="Share">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.06c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div id="progressBar" class="progress-bar" style="display: none;"></div>
+
+                <!-- Browser Content -->
+                <div class="browser-content">
+                    <iframe id="browserFrame" class="browser-frame" allow="geolocation; microphone; camera; payment"></iframe>
+                </div>
+
+                <!-- Loading Indicator -->
+                <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <div class="loading-text">Loading...</div>
+                </div>
+
+                <!-- Error Screen -->
+                <div id="errorScreen" class="error-screen" style="display: none;">
+                    <div class="error-content">
+                        <svg class="error-icon" viewBox="0 0 24 24" width="48" height="48">
+                            <path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                        </svg>
+                        <h2>Unable to Load</h2>
+                        <p id="errorMessage"></p>
+                        <div class="error-actions">
+                            <button id="errorRetryBtn" class="error-btn">Retry</button>
+                            <button id="errorHomeBtn" class="error-btn">Home</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Desktop Browser • Forces desktop mode on mobile</p>
+                <div class="footer-links">
+                    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                    <span>•</span>
+                    <a href="#" id="aboutBtn">About</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" id="closeAboutBtn">&times;</button>
+            <h2>About Desktop Browser</h2>
+            <div class="about-text">
+                <p>Desktop Browser is a web-based tool that helps you access websites in desktop mode, even on mobile devices.</p>
+                
+                <h3>How It Works</h3>
+                <ul>
+                    <li><strong>Desktop User-Agent:</strong> Sends a desktop browser identification to websites</li>
+                    <li><strong>Desktop Viewport:</strong> Displays websites with desktop layout</li>
+                    <li><strong>Full Features:</strong> Navigate, search, and interact with websites normally</li>
+                </ul>
+
+                <h3>Examples</h3>
+                <ul>
+                    <li><code>amazon.com</code> → loads website directly</li>
+                    <li><code>weather today</code> → searches on Google</li>
+                    <li><code>https://example.com</code> → loads with protocol</li>
+                </ul>
+
+                <h3>Tips</h3>
+                <ul>
+                    <li>Some websites may still show mobile version due to JavaScript detection</li>
+                    <li>You can zoom in/out using pinch gestures</li>
+                    <li>All navigation works (back, forward, reload)</li>
+                </ul>
+
+                <h3>Technical</h3>
+                <p>This is a lightweight web application that:</p>
+                <ul>
+                    <li>Uses iframe to display websites</li>
+                    <li>Applies desktop user-agent headers</li>
+                    <li>Works entirely in your browser</li>
+                    <li>No server backend required</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
